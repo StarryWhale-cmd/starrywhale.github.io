@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Starry Whale的CSS练习</title>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei',sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        h1 {
+            color:#ff69b4;
+            text-align: center;
+            border-bottom: 3px solid #ff9999;
+            padding-bottom: 10px;
+        }
+
+        p {
+            color:#333;
+            margin: 15px 0;
+        }
+
+        .highlight {
+            background-color: #fff0f5;
+            border: 2px dashed #66b3ff;
+            border-radius: 5px;
+        }
+
+        .sills {
+            background-color: white;
+            border: 2px dashed #66b3ff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .button {
+            display:inline-block;
+            background-color: #66b3ff;
+            color:white;
+            padding: 10px 20px;
+            text-decoration:none;
+            border-radius: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color:#ff9999;
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid #ff9999;
+            display: block;
+            margin: 0 auto;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <h1>Starry Whale的CSS练习</h1>
+
+    <div style="text-align: center;">
+        <img src="images/派蒙哼哼.jpg" class="avatar" alt="(●'◡'●)">
+        <p>我的虚拟头像</p>
+    </div>
+
+    <div class="skills">
+        <h2>我的学习进度</h>
+        <ul>
+            <li><strong>HTML基础</strong>:已完成</li>
+            <li><strong>CSS样式</strong>:进行中</li>
+            <li><strong>JavaScript</strong>:即将开始</li>
+            <li><strong>Flask框架</strong>:计划中</li>
+        </ul>
+    </div>
+
+    <h2>CSS效果展示</h2>
+    <p>这个段落有正常的样式</p>
+    <p style="color: #ff6666; font-weight: bold;">这个段落用了内联样式,字体是红色粗体</p>
+    <p style="background-color: #ff6666; font-weight: bold;">这个段落有黄色背景和内边距</p>
+
+    <h2>有用的链接</h2>
+    <a href="Web网页练习.html" class="button">查看我的第一个网页</a>
+    <a href="https://www.baidu.com" class="button" target="blank">打开百度</a>
+    <a href="#" class="button" style="background-color: #ff9999;">另一个按钮</a>
+
+    <div style="margin-top: 40px; text-align: center;">
+        <p>学习Web开发就像搭积木,一点一点建出美丽的城堡!</p>
+        <p>Starry Whale正在前进!</p>
+    </div>
+</body>
+</html>
