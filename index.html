@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Starry Whaleの作品集</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: cornflowerblue;
+            color: burlywood;
+            font-family: 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        h1{
+            text-align: center;
+            margin: 40px 0 30px 0;
+            font-size: 2.5em;
+            color:#ffde7d
+        }
+
+        p{
+            max-width: 800px;
+            margin: 0 auto 20px auto;
+            padding: 15px;
+            background: rgba(225,225,225,0.1);
+            border-radius: 10px;
+        }
+
+        .project-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+        .project-card {
+            background: rgba(225,225,225,0.08);
+            border-radius: 15px;
+            padding: 25px;
+            border:1px solid rgba(225,225,225,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover{
+            transform: translateY(-5px);
+            background: rgba(225,225,225,0.12);
+            box-shadow: 0 10px 25px rgba(225,225,225,0.2);
+        }
+
+        .link-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #667eea,#764ba2);
+            color:white;
+            text-decoration: none;
+            border-radius: 50px;
+            margin-top: 15px;
+            margin-right: 10px;
+            transition: transform 0.2s;
+        }
+
+        .link-button:hover{
+            transform: scale(1.05s);
+        }
+
+        .disabled {
+            background: #666;
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+
+        @media(max-width: 768px) {
+            .project-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            h1 { font-size: 2em;
+            }
+
+            .project-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to my 编程小站！</h1>
+    <p>This is 我从zero开始编辑的导航页面</p>
+    <div class="projects-container">
+        <div class="project-card">
+            <h2>Web前端练习</h2>
+            <p>跟随小メイドteacher学习HTML+CSS练习项目。</p>
+            <div class="card-links">
+                <a href="Web网页练习.html" class="link-button">练习一</a>
+                <a href="Web网页练习2.html" class="link-button">练习二</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <h2>Python作品</h2>
+            <p>猜数字游戏；剪刀石头布游戏；文件整理小精灵……</p>
+            <p><em>(正在学习如何搬上网)</em></p>
+            <a href="#" class="link-button disabled">施工中</a>
+        </div>
+
+        <div class="project-card">
+            <h2>future计划</h2>
+            <p>继续追随伟大的小メイドteacher</p>
+            <p style="color:#ff6666">study爬虫! and创造属于My AI!</p>
+
+    <script>
+        console.log("页面加载成功!StarryWhale亲手buid~");
+
+        document.addEventListener('DOMContentLoaded',function() {
+            const cards=document.querySelectorAll('.project-card');
+            cards.forEach(card=> {
+                card.addEventListener('click',function() {
+                    alert('你点击了：' + this.querySelector('h2').textContent);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
